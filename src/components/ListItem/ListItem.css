@@ -1,0 +1,74 @@
+.list-item {
+  border: solid 1px black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.list-item.blocked {
+  opacity: 0.4;
+  background: rgba(0,0,0, 0.2);
+}
+
+.list-item .list-item-collapsed-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-item .avatar-container {
+  display: flex;
+  height: 40px;
+  width: 100px;
+  align-self: center;
+}
+
+
+.list-item .avatar-container img {
+  border-radius: 9999px;
+  overflow: hidden; 
+  height: 40px;
+  width: 40px;
+}
+
+
+.list-item .profile-container {
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+}
+
+.list-item .name-container, 
+.list-item .reputation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-item .name-container .heading, 
+.list-item .reputation-container .heading {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.list-item .list-item-expanded-section {
+  display: flex;
+  padding: 16px 8px;
+}
+
+.list-item .list-item-expanded-section .button-container .button:first-child {
+  margin-right: 8px;
+}
+
+.list-item .button {
+  display: inline-flex;
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list-item .button:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
