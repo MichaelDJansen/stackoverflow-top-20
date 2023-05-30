@@ -46,34 +46,48 @@ const ListItem: React.FC<ListItemProps> = ({
   return (
     <div 
       className={`list-item ${isBlocked ? 'blocked' : ''}`}
+      data-testid="list-item"
       onClick={isBlocked ? undefined : onItemClick}
     >
       <div className="list-item-collapsed-section">
         <div className="avatar-container">
-          <img src={avatar} alt="avatar"/>
-          {isFollowed && <img src="/gold-star.png" alt="followed"/>}
+          <img 
+            src={avatar} 
+            alt="avatar" 
+            data-testid="list-item-avatar"
+          />
+          {isFollowed && 
+            <img src="/gold-star.png" 
+            alt="followed" 
+            data-testid="list-item-followed-icon" 
+          />}
         </div>
         <div className="name-container">
           <span className="heading">Name</span>
-          <span>{name} {isBlocked && "Blocked"}</span>
+          <span data-testid="list-item-name">{name} {isBlocked && "Blocked"}</span>
         </div>
         <div className="reputation-container">
           <span className="heading">Reputation</span>
-          <span>{reputation}</span>
+          <span data-testid="list-item-reputation">{reputation}</span>
         </div>
       </div>
       {
         expanded && (
-          <div className={`list-item-expanded-section`}>
+          <div 
+            className="list-item-expanded-section"
+            data-testid="list-item-expanded-section"
+          >
             <div className='button-container'>
               <div 
                 className="button favourite-button"
+                data-testid="list-item-favourite-button"
                 onClick={handleFollowButtonClick}
               >
                 {isFollowed ? 'Unfollow' : 'Follow'}
               </div>
               <div 
                 className="button block-button"
+                data-testid="list-item-block-button"
                 onClick={handleBlockButtonClick}
               >
                 Block
