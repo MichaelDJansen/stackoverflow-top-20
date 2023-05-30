@@ -26,11 +26,11 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Estimates for categories
-Review - 15m
-Design - 20m
-Implementation - 2h
-Testing - 30m
-Documentation - 15m
+- Review - 15m
+- Design - 20m
+- Implementation - 2h
+- Testing - 30m
+- Documentation - 15m
 
 ## Design Decisions
 - To begin with I used CRA to bootstrap the app as it came with a few tools that I wanted to use out of the box such as React, Jest, TypeScript, React Test Library
